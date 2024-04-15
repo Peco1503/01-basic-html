@@ -1,13 +1,10 @@
-// src/components/Content.tsx
 const Content = () => {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen px-4 bg-gray-100">
-        {/* Header: Nombre y título */}
         <header className="my-8 text-center">
         <h1 className="text-4xl font-bold text-black">FRANCO ENRIQUE LUGO MEZA</h1>
         </header>
   
-        {/* Sección de Educación */}
         <section className="mb-8 w-full">
           <h2 className="text-2xl font-semibold text-center">Educación</h2>
           <div className="mt-2">
@@ -22,8 +19,6 @@ const Content = () => {
             <p>Cursos relevantes: Programación Orientada a Objetos, Estructuras de Datos y Algoritmos, IoT, Construcción de Software, Toma de Decisiones, Sistemas Multi-Agente con Gráficos Computacionales y Planificación de Sistemas de Software.</p>
           </div>
         </section>
-
-        {/* Sección de Experiencia */}
 
         <section className="mb-8 w-full">
             <h2 className="text-2xl font-semibold  text-center">Experiencia</h2>
@@ -40,8 +35,6 @@ const Content = () => {
                 </ul>            
             </div>
         </section>
-
-        {/* Sección de Experiencia */}
 
         <section className="mb-8 w-full">
             <h2 className="text-2xl font-semibold text-center">Proyectos</h2>
@@ -76,7 +69,6 @@ const Content = () => {
             </div>
         </section>
 
-        {/* Sección de Habilidades */}
         <section className="mb-8 w-full">
             <h2 className="text-2xl font-semibold text-center">Habilidades Técnicas</h2>
             <div className="flex flex-wrap gap-3 mt-2">
@@ -99,7 +91,6 @@ const Content = () => {
             </div>
         </section>
 
-        {/* Sección de Idiomas */}
         <section className="mb-8 w-full">
             <h2 className="text-2xl font-semibold text-center">Idiomas</h2>
             <div className="flex flex-wrap gap-3 mt-2">
