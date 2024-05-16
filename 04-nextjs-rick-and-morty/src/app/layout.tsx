@@ -17,9 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} bg-slate-800 text-base text-slate-50`}
-      >
+      <body className={`${inter.className} bg-white text-base text-slate-50`}>
         <main>
           <nav className="flex justify-center bg-slate-500 px-2 py-2">
             <div className="flex gap-10">
