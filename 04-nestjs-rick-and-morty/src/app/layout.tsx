@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-white text-base text-slate-50`}>
         <main>
           <nav className="flex items-center justify-between bg-slate-500 px-2 py-2">
-            <Link href={paths.character}>
+            <Link href={paths.home}>
               <img
                 src="/assets/title.png"
                 alt="Rick and Morty"
