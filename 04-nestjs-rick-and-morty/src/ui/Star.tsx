@@ -8,7 +8,7 @@ export function Star({ isChecked }: { isChecked: boolean }) {
       fill={isChecked ? YELLOW : "none"}
       viewBox="0 0 24 24"
       strokeWidth={1.5}
-      stroke={isChecked ? YELLOW : WHITE}
+      stroke={isChecked ? YELLOW : "black"}
       className="h-6 w-6"
     >
       <path

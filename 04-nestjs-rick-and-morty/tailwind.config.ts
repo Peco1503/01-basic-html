@@ -6,7 +6,11 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "rick-and-morty-green": "#A6E22E",
+      },
+    },
   },
   plugins: [],
 };

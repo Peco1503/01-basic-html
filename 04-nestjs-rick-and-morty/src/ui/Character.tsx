@@ -20,38 +20,44 @@ export function CharacterComponent({
     setIsFavorite(db.isFavorite(id));
   }, [id]);
 
+  const handleFavoriteClick = () => {
+    db.toggleFavoriteCharacter(id);
+    setIsFavorite(!isFavorite);
+
+    if (window.location.pathname === paths.favoriteCharacters) {
+      window.location.reload(); // triggers a refresh only on favorite page
+    }
+  };
+
   return (
-    <div className="relative z-0 flex rounded-md bg-slate-700">
+    <div className="relative flex items-center overflow-hidden rounded-lg bg-white shadow-md">
       <Image
         src={image}
-        alt="character"
-        width={100}
-        height={100}
+        alt={name}
+        width={120}
+        height={120}
         unoptimized
-        className="h-auto rounded-l-md object-cover"
+        className="h-32 w-32 object-cover"
       />
-      <div className="p-2">
-        <button
-          className="absolute right-2 top-2"
-          onClick={(e) => {
-            db.toggleFavoriteCharacter(id);
-            setIsFavorite(!isFavorite);
-
-            if (window.location.pathname === paths.favoriteCharacters) {
-              window.location.reload(); // triggers a refresh only on favorite page
-            }
-          }}
-        >
-          <Star isChecked={isFavorite} />
-        </button>
-        <p className="text-lg">{name}</p>
-        <p className="text-sm">
-          {status} - {gender}
-        </p>
-        <p className="text-sm">Location: {location.name}</p>
+      <div className="flex w-full flex-col justify-between p-4">
+        <div className="flex items-start justify-between">
+          <div>
+            <p className="text-xl font-semibold text-gray-900">{name}</p>
+            <p className="text-sm text-gray-600">
+              {status} - {gender}
+            </p>
+            <p className="text-sm text-gray-600">Location: {location.name}</p>
+          </div>
+          <button
+            className="ml-4 text-yellow-500 transition-colors hover:text-yellow-400"
+            onClick={handleFavoriteClick}
+          >
+            <Star isChecked={isFavorite} />
+          </button>
+        </div>
         <Link
           href={`${paths.character}/${id}`}
-          className="mt-2 inline-block rounded-lg bg-slate-800 px-2 py-1 text-sm"
+          className="mt-4 inline-block rounded-lg bg-blue-500 px-4 py-2 text-center text-sm font-medium text-white transition-colors hover:bg-blue-600"
         >
           Learn More
         </Link>
