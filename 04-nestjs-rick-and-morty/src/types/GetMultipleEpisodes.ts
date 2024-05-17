@@ -1,3 +1,3 @@
-import { Episode } from "./Episode";
+import { Episode } from "./episode";
 
 export type GetMultipleEpisodes = Episode[];
