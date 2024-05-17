@@ -32,7 +32,7 @@ export default function RootLayout({
                 <span className="relative rounded-md bg-white px-5 py-2.5 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900">
                   <Link
                     href={paths.allCharacters}
-                    className="text-rick-and-morty-green font-creepster"
+                    className="font-creepster text-rick-and-morty-green"
                   >
                     All Characters
                   </Link>
@@ -42,7 +42,7 @@ export default function RootLayout({
                 <span className="relative rounded-md bg-white px-5 py-2.5 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900">
                   <Link
                     href={paths.favoriteCharacters}
-                    className="text-rick-and-morty-green font-creepster"
+                    className="font-creepster text-rick-and-morty-green"
                   >
                     Favorite Characters
                   </Link>
