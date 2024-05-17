@@ -3,7 +3,7 @@ import { getMultipleCharacters } from "@/services/getMultipleCharacters";
 import { GetMultipleCharacters } from "@/types/GetMultipleCharacters";
 import { CharacterComponent } from "@/ui/Character";
 import { useEffect, useState } from "react";
-import db from "../controllers/db";
+import db from "../../services/localStorage";
 
 export default function ClientPage() {
   const [favoriteCharacters, setFavoriteCharacters] = useState<

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Character } from "@/types/Character";
 import { Star } from "./Star";
 import { useEffect, useState } from "react";
-import db from "@/app/controllers/db";
+import db from "@/services/localStorage";
 import { paths } from "@/const/paths";
 import Link from "next/link";
 

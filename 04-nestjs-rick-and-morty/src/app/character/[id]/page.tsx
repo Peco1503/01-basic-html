@@ -9,11 +9,9 @@ export default async function ServerPage({
 }) {
   const character = await getCharacter(parseInt(params.id));
 
-  // Parse id from URLs
   const episodesIds = character.episode.map((url) =>
     parseInt(url.split("/").pop()!),
   );
-  // Do second API call
   const episodes = await getMultipleEpisodes(episodesIds);
 
   return (
